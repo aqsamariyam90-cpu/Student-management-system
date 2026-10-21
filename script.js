@@ -13,11 +13,9 @@ let editId = null;
 // Add student or update student
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-
     let name = nameInput.value.trim();
     let age = Number(ageInput.value);
     let course = courseInput.value.trim();
-
     if (name === "" || age <= 0 || course === "") {
         message.textContent = "Please enter valid student details.";
         return;
@@ -43,7 +41,6 @@ form.addEventListener("submit", function(event) {
         }
         editId = null;
         submitBtn.textContent = "Add Student";
-
         message.textContent = "Student updated successfully!";
     }
     form.reset();
