@@ -1,53 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f1f5f9;
-    margin: 0;
-    padding: 20px;
+    padding: 30px 15px;
 }
 .container {
     max-width: 900px;
-    margin: 30px auto;
+    margin: auto;
     background-color: white;
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px #cccccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 h1 {
     text-align: center;
-    color: #1e3a8a;
+    color: #1e293b;
+    margin-bottom: 25px;
 }
 h2 {
     color: #334155;
-    margin-top: 30px;
+    margin: 25px 0 15px;
 }
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 input {
     flex: 1;
     min-width: 150px;
     padding: 12px;
     border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    box-sizing: border-box;
+    border-radius: 5px;
+    font-size: 15px;
+}
+input:focus {
+    outline: none;
+    border-color: #2563eb;
 }
 button {
-    padding: 10px 14px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    background-color: #2563eb;
+    border-radius: 5px;
     color: white;
+    cursor: pointer;
+    font-size: 14px;
 }
-button:hover {
-    opacity: 0.85;
+#submitBtn {
+    background-color: #2563eb;
+}
+#submitBtn:hover {
+    background-color: #1d4ed8;
+}
+#message {
+    margin-top: 15px;
+    color: #15803d;
+    font-size: 14px;
 }
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 th, td {
     padding: 12px;
@@ -55,35 +72,44 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #1e3a8a;
+    background-color: #1e293b;
     color: white;
+}
+tr:nth-child(even) {
+    background-color: #f8fafc;
 }
 .edit-btn {
     background-color: #16a34a;
     margin: 2px;
 }
+.edit-btn:hover {
+    background-color: #15803d;
+}
 .delete-btn {
     background-color: #dc2626;
     margin: 2px;
 }
-#message {
-    color: #15803d;
-    font-weight: bold;
+.delete-btn:hover {
+    background-color: #b91c1c;
 }
 @media (max-width: 600px) {
     .container {
-        padding: 12px;
-    }
-    .table-container {
-        overflow-x: auto;
-    }
-    table {
-        min-width: 550px;
+        padding: 15px;
     }
     form {
         flex-direction: column;
     }
-    input {
+    input, #submitBtn {
         width: 100%;
+    }
+    table {
+        font-size: 12px;
+    }
+    th, td {
+        padding: 7px 5px;
+    }
+    button {
+        padding: 7px;
+        font-size: 12px;
     }
 }
