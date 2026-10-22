@@ -11,7 +11,6 @@ let message = document.getElementById("message");
 // Add or Update Student
 form.addEventListener("submit", function(event) {
     event.preventDefault();
-
     let student = {
         name: nameInput.value.trim(),
         age: Number(ageInput.value),
